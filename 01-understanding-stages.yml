@@ -18,10 +18,10 @@ stages:
     - bash: echo $(System.DefaultWorkingDirectory)
     - bash: ls -R $(System.DefaultWorkingDirectory)
     - bash: echo $(Build.ArtifactStagingDirectory)
-    - bash: echo java -version
-    - bash: echo node --version
-    - bash: echo python --version
-    - bash: echo mvn -version
+    - bash: java -version
+    - bash: node --version
+    - bash: python --version
+    - bash: mvn -version
     - bash: ls -R $(Build.ArtifactStagingDirectory)
     - task: CopyFiles@2
       inputs:
@@ -59,4 +59,4 @@ stages:
 #   jobs:
 #   - job: ProdDeployJob
 #     steps:
-    - bash: echo $(environment)DeployJob
+#     - bash: echo $(environment)DeployJob
